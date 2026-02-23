@@ -1,19 +1,56 @@
 /**
  * @author Ojas Gangrade
- * @version 5.0
- * OOPSBannerApp - Uses inline array initialization for conciseness
+ * @version 6.0
+ * OOPSBannerApp - Uses static helper methods for modular design
  */
 public class OOPSBannerApp {
-    public static void main(String[] args) {
-        String[] bannerLines = {
-            String.join("", "  *     *     ***    ***  "),
-            String.join("", " * *   * *   *   *  *   * "),
-            String.join("", "*   * *   *  *   *  *   * "),
-            String.join("", "*   * *   *  *   *  *   * "),
-            String.join("", "*   * *   *  *   *  *   * "),
-            String.join("", " * *   * *   *   *  *   * "),
-            String.join("", "  *     *     ***    ***  ")
+    
+    public static String getLineO(int row) {
+        String[] lines = {
+            "  *  ",
+            " * * ",
+            "*   *",
+            "*   *",
+            "*   *",
+            " * * ",
+            "  *  "
         };
+        return lines[row];
+    }
+    
+    public static String getLineP(int row) {
+        String[] lines = {
+            " *** ",
+            "*   *",
+            "*   *",
+            " *** ",
+            "*    ",
+            "*    ",
+            "*    "
+        };
+        return lines[row];
+    }
+    
+    public static String getLineS(int row) {
+        String[] lines = {
+            " *** ",
+            "*    ",
+            "*    ",
+            " *** ",
+            "    *",
+            "    *",
+            " *** "
+        };
+        return lines[row];
+    }
+    
+    public static void main(String[] args) {
+        String[] bannerLines = new String[7];
+        
+        for (int i = 0; i < 7; i++) {
+            bannerLines[i] = String.join("", 
+                getLineO(i), getLineO(i), getLineP(i), getLineS(i));
+        }
         
         for (String line : bannerLines) {
             System.out.println(line);
