@@ -1,10 +1,16 @@
 /**
  * @author Ojas Gangrade
- * @version 1.0
- * OOPSBannerApp - Displays the text "OOPS" to the console
+ * @version 2.0
+ * OOPSBannerApp - Displays "OOPS" as an ASCII art banner
  */
 public class OOPSBannerApp {
     public static void main(String[] args) {
-        System.out.println("OOPS");
+        System.out.println("  *     *     ***    ***  ");
+        System.out.println(" * *   * *   *   *  *   * ");
+        System.out.println("*   * *   *  *   *  *   * ");
+        System.out.println("*   * *   *  *   *  *   * ");
+        System.out.println("*   * *   *  *   *  *   * ");
+        System.out.println(" * *   * *   *   *  *   * ");
+        System.out.println("  *     *     ***    ***  ");
     }
 }
