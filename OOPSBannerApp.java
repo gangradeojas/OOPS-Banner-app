@@ -1,16 +1,16 @@
 /**
  * @author Ojas Gangrade
- * @version 2.0
- * OOPSBannerApp - Displays "OOPS" as an ASCII art banner
+ * @version 3.0
+ * OOPSBannerApp - Uses String.join() for efficient banner creation
  */
 public class OOPSBannerApp {
     public static void main(String[] args) {
-        System.out.println("  *     *     ***    ***  ");
-        System.out.println(" * *   * *   *   *  *   * ");
-        System.out.println("*   * *   *  *   *  *   * ");
-        System.out.println("*   * *   *  *   *  *   * ");
-        System.out.println("*   * *   *  *   *  *   * ");
-        System.out.println(" * *   * *   *   *  *   * ");
-        System.out.println("  *     *     ***    ***  ");
+        System.out.println(String.join("", "  *     *     ***    ***  "));
+        System.out.println(String.join("", " * *   * *   *   *  *   * "));
+        System.out.println(String.join("", "*   * *   *  *   *  *   * "));
+        System.out.println(String.join("", "*   * *   *  *   *  *   * "));
+        System.out.println(String.join("", "*   * *   *  *   *  *   * "));
+        System.out.println(String.join("", " * *   * *   *   *  *   * "));
+        System.out.println(String.join("", "  *     *     ***    ***  "));
     }
 }
